@@ -26,7 +26,7 @@ app.get("/api/hello", function (req, res) {
 
 // whoami API endppoint
 app.get('/api/whoami', (req, res) =>
-  res.send(req.body)
+  res.send(console.log(req.body))
 );
 
 
