@@ -24,6 +24,10 @@ app.get("/api/hello", function (req, res) {
   res.json({greeting: 'hello API'});
 });
 
+// whoami API endppoint
+app.get('/api/whoami', (req, res) =>
+  res.json(req.body);
+);
 
 
 // listen for requests :)
