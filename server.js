@@ -25,9 +25,13 @@ app.get("/api/hello", function (req, res) {
 });
 
 // whoami API endppoint
-app.get('/api/whoami', (req, res) =>
-  res.send(console.log(req.body))
-);
+app.get('/api/whoami', (req, res) => {
+  res.json({
+    ipaddress: req.ip,
+    langauge: req.get('Accept-Language'),
+    software: req.get('User-Agent')
+  })
+});
 
 
 // listen for requests :)
